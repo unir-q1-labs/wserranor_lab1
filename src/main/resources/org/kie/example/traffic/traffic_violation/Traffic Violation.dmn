@@ -1,6 +1,51 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_710AC232-6A1D-4288-8394-2A14CF323F83" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_EE6FEEFB-1AF4-4C66-BB3C-F1FAEAAC4B50" name="Traffic Violation" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_710AC232-6A1D-4288-8394-2A14CF323F83">
   <dmn:extensionElements/>
+  <dmn:itemDefinition id="_7A56B9C2-70C8-4FD5-8DCE-86D1CEDF6592" name="tDriver" isCollection="false">
+    <dmn:itemComponent id="_AE85BA6C-3FBA-40CD-B478-BAD165942BE1" name="Points" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_27A250EF-E252-4264-9472-040EE7EF0920" name="City" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D2C73FF0-B798-4D08-96AC-876567949F5A" name="State" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_4A9CF0D8-C749-42AD-B25E-B6468D691CCC" name="Age" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_DF0A7C8C-9688-49A7-BD77-6D7279F736EC" name="Name" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_963D94A9-9F17-4E56-96D4-A7FFEECEA035" name="tViolation" isCollection="false">
+    <dmn:itemComponent id="_CA111A1A-A370-4465-A2F6-F24FE3F36BBC" name="Actual Speed" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D14A64C5-8B44-4919-819F-B48FBF55615F" name="Speed Limit" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_222C0AC0-E125-4720-8F25-1DFF1B186E9F" name="Type" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+      <dmn:allowedValues kie:constraintType="enumeration" id="_B27F81B0-9E58-41CF-806A-9AAC165BDA02">
+        <dmn:text>speed, parking, driving under the influence</dmn:text>
+      </dmn:allowedValues>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_B3AAAB13-F2DC-4A1D-B8DB-D6E4F46E87B2" name="Date" isCollection="false">
+      <dmn:typeRef>date</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_8B42F9D4-F382-434B-BE21-9708FFEE2CD5" name="Code" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_636405DD-AAB0-4D20-AE80-5C4D215E835B" name="tFine" isCollection="false">
+    <dmn:itemComponent id="_15A9355F-A699-4463-8E32-02A09BFA257D" name="Points" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_7FC0B411-B3D7-4B81-BB6F-C5DBDB32AA43" name="Amount" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
   <dmn:inputData id="_97086E3E-1BC8-4D31-9E2F-E89796E55C47" name="Driver">
     <dmn:extensionElements/>
     <dmn:variable id="_9F1C9284-19AF-4259-8543-1B6495B9F372" name="Driver"/>
@@ -55,7 +100,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="546" y="411" width="100" height="50"/>
+        <dc:Bounds x="557" y="411" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_E8B18F55-2595-4700-8858-837757E7B3C7" dmnElementRef="_E8B18F55-2595-4700-8858-837757E7B3C7" isCollapsed="false">
@@ -76,7 +121,7 @@
         <di:waypoint x="949" y="257"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-_5EABF558-ABAE-4734-A8DB-D180515BD995" dmnElementRef="_5EABF558-ABAE-4734-A8DB-D180515BD995">
-        <di:waypoint x="596" y="411"/>
+        <di:waypoint x="607" y="411"/>
         <di:waypoint x="608" y="282"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
