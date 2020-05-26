@@ -58,6 +58,101 @@
     <dmn:informationRequirement id="_5EABF558-ABAE-4734-A8DB-D180515BD995">
       <dmn:requiredInput href="#_A3CBF73D-3F4E-4BC4-AF60-388708402E26"/>
     </dmn:informationRequirement>
+    <dmn:decisionTable id="_9C5CF1E0-E2F4-4266-B807-EF3A75E909EC" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_78488BEB-AD5E-4A4E-91FC-48F54D9BDAF1">
+        <dmn:inputExpression id="_64B08F94-DE03-4414-A4CC-FD6EB75DE75C" typeRef="string">
+          <dmn:text>Violation.Type</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_FE401E0F-AD20-4030-AD36-7EFF674E8EFA">
+        <dmn:inputExpression id="_066B2DF4-25EE-4998-A4CB-643764C59BFC" typeRef="number">
+          <dmn:text>Violation.Actual Speed -Violation.Speed Limit</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_F80FC359-CA60-4178-B27A-84FEEF30DAD7">
+        <dmn:inputExpression id="_8D6CD011-CF8F-465F-B6DE-CE90145702E0" typeRef="number">
+          <dmn:text>Amount</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_97702284-182D-4694-898B-BFD6BF8F4B2D">
+        <dmn:inputExpression id="_4DF263BA-1E02-4316-B64B-F8D54A976E80" typeRef="number">
+          <dmn:text>Points</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_31A3029F-3ACB-4AE9-9E47-FED0DDE2E116" typeRef="tFine"/>
+      <dmn:rule id="_6621ADC4-151E-4014-ABB8-862806C95173">
+        <dmn:description>Exceso velocidad entre 10 y 30 kms/h</dmn:description>
+        <dmn:inputEntry id="_A2353422-3244-406B-B158-49F8E14539BD">
+          <dmn:text>"speed"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_632B5F43-5C27-4AC1-ACF5-16584568A7BE">
+          <dmn:text>[10..30)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EAE57ECB-847F-4F67-A3FB-B128AC214712">
+          <dmn:text>500</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EE0148E0-AAAE-4265-85F7-3A2810A24215">
+          <dmn:text>3</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_7273B062-462A-4389-9F09-66F67408A15F">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_44AD24B1-F4AD-4AB3-A36D-943E35CECC1E">
+        <dmn:description>Exceso velocidad mayor a 30 kms/h</dmn:description>
+        <dmn:inputEntry id="_66C36427-BB6C-4633-9816-224A4B4CB496">
+          <dmn:text>"speed"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F0B8A239-0121-4D15-9CE6-87F803471DD3">
+          <dmn:text>&gt;= 30</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_298056E6-E313-48F9-845F-C31298943F30">
+          <dmn:text>1000</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B850E09D-8FD7-4FEC-ADA6-C431BA12AA1C">
+          <dmn:text>7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_5FE712C2-454C-464E-B086-CFA7B9D5F4E6">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_336BE290-9016-436B-AAAB-45DFA06C51A7">
+        <dmn:description>Parqueo en zona prohibida</dmn:description>
+        <dmn:inputEntry id="_60116B42-5EF1-493E-97A7-DB15F5C09A66">
+          <dmn:text>"parking"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_974D660E-B7AB-4836-B9C9-E4A7D6C9186A">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0CF6D007-9785-406D-805C-0862743D3F46">
+          <dmn:text>100</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EC035003-F069-41DE-ADB2-575250A899E1">
+          <dmn:text>1</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_F90F04F8-4C7E-4395-BD69-42103BF0A1C1">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_3A1528FC-C329-45CE-8419-909A97C81318">
+        <dmn:description>Conducir bajo influencia de alguna sustancia</dmn:description>
+        <dmn:inputEntry id="_0A15A1AE-CD1A-44DB-95EC-03EA41DD90A4">
+          <dmn:text>"driving under the influence"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_390CF340-AE82-4D2F-A43F-7E1489305A6F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A010E525-DD34-470B-8838-A4BBABFFCF48">
+          <dmn:text>1000</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_75350237-2030-40BA-A6C7-BEBC11253832">
+          <dmn:text>5</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_C3A75607-5BA9-4202-B125-2891A72B337A">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
   </dmn:decision>
   <dmn:decision id="_A104B0A7-EEC3-4E65-A188-F712D01D652C" name="Shut the Driver be suspended">
     <dmn:extensionElements/>
@@ -79,7 +174,17 @@
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
-        <kie:ComponentsWidthsExtension/>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_9C5CF1E0-E2F4-4266-B807-EF3A75E909EC">
+            <kie:width>50.0</kie:width>
+            <kie:width>169.0</kie:width>
+            <kie:width>285.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>193.0</kie:width>
+            <kie:width>260.0</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
       </di:extension>
       <dmndi:DMNShape id="dmnshape-_A104B0A7-EEC3-4E65-A188-F712D01D652C" dmnElementRef="_A104B0A7-EEC3-4E65-A188-F712D01D652C" isCollapsed="false">
         <dmndi:DMNStyle>
