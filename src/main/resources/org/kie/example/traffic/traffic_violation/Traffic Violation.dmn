@@ -83,7 +83,7 @@
       <dmn:rule id="_6621ADC4-151E-4014-ABB8-862806C95173">
         <dmn:description>Exceso velocidad entre 10 y 30 kms/h</dmn:description>
         <dmn:inputEntry id="_A2353422-3244-406B-B158-49F8E14539BD">
-          <dmn:text>"speed"</dmn:text>
+          <dmn:text>"Speed"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_632B5F43-5C27-4AC1-ACF5-16584568A7BE">
           <dmn:text>[10..30)</dmn:text>
@@ -101,7 +101,7 @@
       <dmn:rule id="_44AD24B1-F4AD-4AB3-A36D-943E35CECC1E">
         <dmn:description>Exceso velocidad mayor a 30 kms/h</dmn:description>
         <dmn:inputEntry id="_66C36427-BB6C-4633-9816-224A4B4CB496">
-          <dmn:text>"speed"</dmn:text>
+          <dmn:text>"Speed"</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_F0B8A239-0121-4D15-9CE6-87F803471DD3">
           <dmn:text>&gt;= 30</dmn:text>
