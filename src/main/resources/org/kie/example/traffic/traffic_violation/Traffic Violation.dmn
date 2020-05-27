@@ -139,6 +139,7 @@
     <dmn:variable id="_A5CEE1AA-6A3E-4F8B-9EFA-38A63C2E2A5D" name="Violation" typeRef="tViolation"/>
   </dmn:inputData>
   <dmn:decision id="_A104B0A7-EEC3-4E65-A188-F712D01D652C" name="Shut the Driver be suspended">
+    <dmn:description>Decisión suspensión de licencia del conductor infractor</dmn:description>
     <dmn:extensionElements/>
     <dmn:question>Should the driver be suspended due to points on his driver license?</dmn:question>
     <dmn:allowedAnswers>Yes,No</dmn:allowedAnswers>
