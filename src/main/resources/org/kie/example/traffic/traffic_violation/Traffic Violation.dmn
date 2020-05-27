@@ -69,17 +69,8 @@
           <dmn:text>Violation.Actual Speed -Violation.Speed Limit</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:input id="_F80FC359-CA60-4178-B27A-84FEEF30DAD7">
-        <dmn:inputExpression id="_8D6CD011-CF8F-465F-B6DE-CE90145702E0" typeRef="number">
-          <dmn:text>Amount</dmn:text>
-        </dmn:inputExpression>
-      </dmn:input>
-      <dmn:input id="_97702284-182D-4694-898B-BFD6BF8F4B2D">
-        <dmn:inputExpression id="_4DF263BA-1E02-4316-B64B-F8D54A976E80" typeRef="number">
-          <dmn:text>Points</dmn:text>
-        </dmn:inputExpression>
-      </dmn:input>
-      <dmn:output id="_31A3029F-3ACB-4AE9-9E47-FED0DDE2E116" typeRef="tFine"/>
+      <dmn:output id="_7EAE6A2F-BA14-4897-B88F-E0581764D688" name="Amount" typeRef="number"/>
+      <dmn:output id="_31A3029F-3ACB-4AE9-9E47-FED0DDE2E116" name="Points" typeRef="number"/>
       <dmn:rule id="_6621ADC4-151E-4014-ABB8-862806C95173">
         <dmn:description>Exceso velocidad entre 10 y 30 kms/h</dmn:description>
         <dmn:inputEntry id="_A2353422-3244-406B-B158-49F8E14539BD">
@@ -88,14 +79,11 @@
         <dmn:inputEntry id="_632B5F43-5C27-4AC1-ACF5-16584568A7BE">
           <dmn:text>[10..30)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry id="_EAE57ECB-847F-4F67-A3FB-B128AC214712">
+        <dmn:outputEntry id="_88E5143D-F807-4220-B67D-A77962F51645">
           <dmn:text>500</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry id="_EE0148E0-AAAE-4265-85F7-3A2810A24215">
-          <dmn:text>3</dmn:text>
-        </dmn:inputEntry>
+        </dmn:outputEntry>
         <dmn:outputEntry id="_7273B062-462A-4389-9F09-66F67408A15F">
-          <dmn:text></dmn:text>
+          <dmn:text>3</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule id="_44AD24B1-F4AD-4AB3-A36D-943E35CECC1E">
@@ -106,14 +94,11 @@
         <dmn:inputEntry id="_F0B8A239-0121-4D15-9CE6-87F803471DD3">
           <dmn:text>&gt;= 30</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry id="_298056E6-E313-48F9-845F-C31298943F30">
+        <dmn:outputEntry id="_5922D979-B3B0-4C51-A1E8-D47AE8CDFE18">
           <dmn:text>1000</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry id="_B850E09D-8FD7-4FEC-ADA6-C431BA12AA1C">
-          <dmn:text>7</dmn:text>
-        </dmn:inputEntry>
+        </dmn:outputEntry>
         <dmn:outputEntry id="_5FE712C2-454C-464E-B086-CFA7B9D5F4E6">
-          <dmn:text></dmn:text>
+          <dmn:text>7</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule id="_336BE290-9016-436B-AAAB-45DFA06C51A7">
@@ -124,14 +109,11 @@
         <dmn:inputEntry id="_974D660E-B7AB-4836-B9C9-E4A7D6C9186A">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry id="_0CF6D007-9785-406D-805C-0862743D3F46">
+        <dmn:outputEntry id="_92E92EAE-C302-49CF-B618-A41F0B5C6CF4">
           <dmn:text>100</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry id="_EC035003-F069-41DE-ADB2-575250A899E1">
-          <dmn:text>1</dmn:text>
-        </dmn:inputEntry>
+        </dmn:outputEntry>
         <dmn:outputEntry id="_F90F04F8-4C7E-4395-BD69-42103BF0A1C1">
-          <dmn:text></dmn:text>
+          <dmn:text>1</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule id="_3A1528FC-C329-45CE-8419-909A97C81318">
@@ -142,14 +124,11 @@
         <dmn:inputEntry id="_390CF340-AE82-4D2F-A43F-7E1489305A6F">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry id="_A010E525-DD34-470B-8838-A4BBABFFCF48">
+        <dmn:outputEntry id="_4B6BD293-AA4A-4202-89E7-08C3A97944CC">
           <dmn:text>1000</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry id="_75350237-2030-40BA-A6C7-BEBC11253832">
-          <dmn:text>5</dmn:text>
-        </dmn:inputEntry>
+        </dmn:outputEntry>
         <dmn:outputEntry id="_C3A75607-5BA9-4202-B125-2891A72B337A">
-          <dmn:text></dmn:text>
+          <dmn:text>5</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
     </dmn:decisionTable>
@@ -192,9 +171,8 @@
             <kie:width>50.0</kie:width>
             <kie:width>169.0</kie:width>
             <kie:width>285.0</kie:width>
-            <kie:width>100.0</kie:width>
-            <kie:width>100.0</kie:width>
-            <kie:width>193.0</kie:width>
+            <kie:width>143.0</kie:width>
+            <kie:width>127.0</kie:width>
             <kie:width>260.0</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_BFC8699F-DBF3-4283-A731-103B292BBA7F">
