@@ -382,7 +382,7 @@ km/h</rawValue>
               <name>1|12</name>
               <type>EXPECT</type>
             </expressionIdentifier>
-            <rawValue class="string">100</rawValue>
+            <rawValue class="string">1000</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
