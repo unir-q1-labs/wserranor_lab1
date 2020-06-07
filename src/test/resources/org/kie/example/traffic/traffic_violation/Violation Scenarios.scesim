@@ -234,7 +234,7 @@ km/h</rawValue>
               <name>1|6</name>
               <type>GIVEN</type>
             </expressionIdentifier>
-            <rawValue class="string">&quot;speed&quot;</rawValue>
+            <rawValue class="string">&quot;Speed&quot;</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
@@ -245,7 +245,7 @@ km/h</rawValue>
               <name>1|7</name>
               <type>GIVEN</type>
             </expressionIdentifier>
-            <rawValue class="string">30</rawValue>
+            <rawValue class="string">100</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
@@ -256,7 +256,7 @@ km/h</rawValue>
               <name>1|8</name>
               <type>GIVEN</type>
             </expressionIdentifier>
-            <rawValue class="string">25</rawValue>
+            <rawValue class="string">120</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
@@ -338,7 +338,7 @@ km/h</rawValue>
               <name>1|6</name>
               <type>GIVEN</type>
             </expressionIdentifier>
-            <rawValue class="string">&quot;speed&quot;</rawValue>
+            <rawValue class="string">&quot;Speed&quot;</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
@@ -349,7 +349,7 @@ km/h</rawValue>
               <name>1|7</name>
               <type>GIVEN</type>
             </expressionIdentifier>
-            <rawValue class="string">30</rawValue>
+            <rawValue class="string">100</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
@@ -643,7 +643,7 @@ km/h</rawValue>
               <name>1|6</name>
               <type>GIVEN</type>
             </expressionIdentifier>
-            <rawValue class="string">&quot;speed&quot;</rawValue>
+            <rawValue class="string">&quot;Speed&quot;</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
