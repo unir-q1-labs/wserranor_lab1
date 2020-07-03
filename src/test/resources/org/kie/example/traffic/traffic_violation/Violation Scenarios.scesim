@@ -732,7 +732,7 @@ km/h</rawValue>
           <factAlias>INSTANCE 1</factAlias>
           <expressionAlias>PROPERTY 1</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>114.0</columnWidth>
+          <columnWidth>1383.0</columnWidth>
         </FactMapping>
       </factMappings>
     </scesimModelDescriptor>
